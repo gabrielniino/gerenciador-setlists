@@ -60,6 +60,7 @@ function renderHome() {
 
         container.appendChild(div);
     });
+    document.getElementById("setlist-count").textContent = `Total de setlists: ${data.length}`;
 }
 
 
@@ -117,6 +118,7 @@ function renderSetlistSongs() {
 
         container.appendChild(div);
     });
+    document.getElementById("song-count").textContent = `Músicas neste setlist: ${songs.length}`;
 }
 
 function createSong() {

@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.view h1,
+.view h2 {
+    margin-top: 0;
+}
+
+.setlist,
+.song {
+    padding: 10px;
+    background: #f0f0f0;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.lyric-line {
+    padding: 6px;
+    margin: 4px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.decorado {
+    background-color: #d4edda;
+}
+
+.cantar_vendo {
+    background-color: #fff3cd;
+}
+
+.preciso_aprender {
+    background-color: #f8d7da;
+}
+
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    margin: 6px 0;
+}
+
+.progress {
+    height: 100%;
+}
+
+.progress.decorado {
+    background-color: #28a745;
+    /* verde */
+}
+
+.progress.cantar_vendo {
+    background-color: #ffc107;
+    /* amarelo */
+}
+
+.progress.preciso_aprender {
+    background-color: #dc3545;
+    /* vermelho */
+}

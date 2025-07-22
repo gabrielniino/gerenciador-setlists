@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Setlists</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="view-home" class="view">
+            <h1>🎵 Meus Setlists</h1>
+            <div id="setlist-list"></div>
+            <button onclick="createSetlist()">➕ Novo Setlist</button>
+        </div>
+
+        <div id="view-setlist" class="view hidden">
+            <h2 id="setlist-title"></h2>
+            <div id="song-list"></div>
+            <button onclick="deleteSetlist()">🗑️ Excluir Setlist</button>
+            <button onclick="createSong()">➕ Nova Música</button>
+            <br /><br />
+            <button onclick="goHome()">← Voltar</button>
+        </div>
+
+        <div id="view-song" class="view hidden">
+            <h2 id="song-title"></h2>
+            <div id="lyrics-container"></div>
+            <button onclick="deleteSong()">🗑️ Excluir Música</button>
+
+            <br />
+            <button onclick="goBackToSetlist()">← Voltar ao Setlist</button>
+        </div>
+    </div>
+
+    <div id="status-popup" class="popup hidden">
+        <button onclick="setLineStatus('decorado')">✅ Já decorei</button>
+        <button onclick="setLineStatus('cantar_vendo')">👁️ Consigo cantar vendo</button>
+        <button onclick="setLineStatus('preciso_aprender')">❌ Ainda preciso aprender</button>
+        <button onclick="setLineStatus(null)">🗑️ Limpar status</button>
+        <button onclick="closePopup()">Cancelar</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

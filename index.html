@@ -12,15 +12,15 @@
     <div class="container">
         <div id="view-home" class="view">
             <h1>🎵 Meus Setlists</h1>
-            <div id="setlist-list"></div>
             <button onclick="createSetlist()">➕ Novo Setlist</button>
+            <div id="setlist-list"></div>
         </div>
 
         <div id="view-setlist" class="view hidden">
             <h2 id="setlist-title"></h2>
-            <div id="song-list"></div>
             <button onclick="deleteSetlist()">🗑️ Excluir Setlist</button>
             <button onclick="createSong()">➕ Nova Música</button>
+            <div id="song-list"></div>
             <br /><br />
             <button onclick="goHome()">← Voltar</button>
         </div>
@@ -36,7 +36,7 @@
     </div>
 
     <div id="status-popup" class="popup hidden">
-        <button onclick="setLineStatus('decorado')">✅ Já decorei</button>
+        <button onclick="setLineStatus('decorado')">✅ Decorado</button>
         <button onclick="setLineStatus('cantar_vendo')">👁️ Consigo cantar vendo</button>
         <button onclick="setLineStatus('preciso_aprender')">❌ Ainda preciso aprender</button>
         <button onclick="setLineStatus(null)">🗑️ Limpar status</button>

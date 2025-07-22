@@ -146,24 +146,32 @@ function openSong(index) {
 function renderLyrics() {
     const container = document.getElementById("lyrics-container");
     container.innerHTML = "";
+
     const lyrics = data[currentSetlistIndex].songs[currentSongIndex].lyrics;
+
     lyrics.forEach((lineObj, i) => {
         const div = document.createElement("div");
         div.className = "lyric-line";
-        if (lineObj.status) div.classList.add(lineObj.status);
         div.textContent = lineObj.line;
 
-        // Só habilita clique se a linha NÃO for vazia
+        if (lineObj.status) {
+            div.classList.add(lineObj.status);
+        }
+
+        // Só permite clique se a linha tiver texto
         if (lineObj.line.trim()) {
-            div.style.cursor = "pointer";
-            div.onclick = () => {
-                currentLineIndex = i;
-                popup.classList.remove("hidden");
-            };
-        } else {
-            // Linha vazia fica com cursor padrão e sem clique
-            div.style.cursor = "default";
-            div.onclick = null;
+            div.addEventListener("click", (e) => {
+                if (currentLineIndex === i) {
+                    // Clicou na mesma linha: fecha o popup
+                    closePopup();
+                    currentLineIndex = null;
+                } else {
+                    // Clicou em outra linha: abre popup
+                    currentLineIndex = i;
+                    const rect = div.getBoundingClientRect();
+                    openPopup(rect.left + window.scrollX + 10, rect.top + window.scrollY + 30);
+                }
+            });
         }
 
         container.appendChild(div);

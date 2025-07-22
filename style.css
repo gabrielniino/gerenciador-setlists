@@ -32,6 +32,21 @@ button:hover {
     display: none;
 }
 
+.popup {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup.hidden {
+    display: none;
+}
+
+
 .view h1,
 .view h2 {
     margin-top: 0;
@@ -63,21 +78,6 @@ button:hover {
 
 .preciso_aprender {
     background-color: #f8d7da;
-}
-
-.popup {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 .progress-bar {

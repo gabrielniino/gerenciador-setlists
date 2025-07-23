@@ -113,7 +113,7 @@ function renderSetlistSongs() {
         <div class="progress cantar_vendo" style="width: ${p2}%;"></div>
         <div class="progress preciso_aprender" style="width: ${p3}%;"></div>
       </div>
-      <small>${p1}% decorado | ${p2}% cantando lendo | ${p3}% a aprender</small>
+      <small>${p1}% memorizado | ${p2}% cantando com a letra | ${p3}% a aprender</small>
     `;
 
         container.appendChild(div);
